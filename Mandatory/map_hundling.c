@@ -17,10 +17,7 @@ t_data	*ft_fill(t_data *data)
 	data->node->next = 0;
 	data->str = malloc ((data->j + 1) * sizeof(char *));
 	if (!data->str)
-	{
-		write(2, "Problem In Memory Allocation\n", 30);
 		ft_exit(1337, data);
-	}
 	while (data->node)
 	{
 		data->str[data->j] = data->node->line;

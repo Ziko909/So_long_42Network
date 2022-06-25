@@ -45,7 +45,13 @@ int	ft_exit(int key, t_data *data)
 	if (key == 53 || key == 1337)
 	{
 		ft_free(data);
-		exit(0);
+		if (key == 1337)
+		{
+			ft_putstr_fd("Memory Allocation Failed !!!\n", 2);
+			exit(12);
+		}
+		else
+			exit(0);
 	}
 	return (0);
 }
