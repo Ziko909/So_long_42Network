@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_hundling.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 08:20:41 by zaabou            #+#    #+#             */
-/*   Updated: 2022/04/14 09:16:53 by zaabou           ###   ########.fr       */
+/*   Created: 2022/06/27 00:18:08 by zaabou            #+#    #+#             */
+/*   Updated: 2022/06/27 00:18:09 by zaabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../Header/so_long.h"
@@ -14,7 +14,7 @@
 t_data	*ft_fill(t_data *data)
 {
 	data->map_len = (data->j - 1);
-	data->node->next = 0;
+	data->node->next = NULL;
 	data->str = malloc ((data->j + 1) * sizeof(char *));
 	if (!data->str)
 		ft_exit(1337, data);
@@ -51,7 +51,8 @@ void	ft_error(int x, t_data *data)
 		ft_putstr_fd("ERROR\nThe Extension Of File Must Be .ber\n", 2);
 	else if (x == 8)
 		ft_putstr_fd("ERROR\nExtra A New Line At  The End Of The File\n", 2);
-	ft_exit(1337, data);
+	ft_free(data);
+	exit(1);
 }
 
 t_data	*read_the_map(char	*av, t_data	*data)
@@ -59,9 +60,8 @@ t_data	*read_the_map(char	*av, t_data	*data)
 	data->node = malloc (sizeof(t_lst));
 	if (!data->node)
 		ft_exit(1337, data);
-	data->node->prev = NULL;
-	data->tmp = data->node;
-	data->fd = open(av, O_RDONLY, 00777);
+	init_data(&data);
+	data->fd = open(av, O_RDONLY, 00700);
 	if (data->fd < 0)
 		ft_error(6, data);
 	data->j = 0;

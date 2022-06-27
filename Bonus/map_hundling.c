@@ -63,6 +63,8 @@ t_data	*read_the_map(char	*av, t_data	*data)
 	if (!data->node)
 		ft_exit(1337, data);
 	data->node->prev = NULL;
+	data->node->next = NULL;
+	data->str = NULL;
 	data->tmp = data->node;
 	data->fd = open(av, O_RDONLY, 00777);
 	if (data->fd < 0)
