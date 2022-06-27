@@ -1,14 +1,16 @@
 define Intro
 
-░██████╗░█████╗░██╗░░░░░░█████╗░███╗░░██╗░██████╗░
-██╔════╝██╔══██╗██║░░░░░██╔══██╗████╗░██║██╔════╝░
-╚█████╗░██║░░██║██║░░░░░██║░░██║██╔██╗██║██║░░██╗░
-░╚═══██╗██║░░██║██║░░░░░██║░░██║██║╚████║██║░░╚██╗
-██████╔╝╚█████╔╝███████╗╚█████╔╝██║░╚███║╚██████╔╝
-╚═════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚══╝░╚═════╝░
+					░██████╗░█████╗░██╗░░░░░░█████╗░███╗░░██╗░██████╗░
+					██╔════╝██╔══██╗██║░░░░░██╔══██╗████╗░██║██╔════╝░
+					╚█████╗░██║░░██║██║░░░░░██║░░██║██╔██╗██║██║░░██╗░
+					░╚═══██╗██║░░██║██║░░░░░██║░░██║██║╚████║██║░░╚██╗
+					██████╔╝╚█████╔╝███████╗╚█████╔╝██║░╚███║╚██████╔╝
+					╚═════╝░░╚════╝░╚══════╝░╚════╝░╚═╝░░╚══╝░╚═════╝░		By : Ziko909 👨🏼‍💻
 endef
 export
 CC = cc
+
+Tab=\t\t\t\t\t
 
 NAME = so_long
 
@@ -24,7 +26,7 @@ GNL = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 
 OBJ_GNL = $(GNL:.c=.o)
 
-SRC_M = Mandatory/so_long.c Mandatory/map_hundling.c Mandatory/win_mng.c Mandatory/tools.c Mandatory/jerry.c Mandatory/ft_animation.c
+SRC_M = Mandatory/so_long.c Mandatory/map_hundling.c Mandatory/win_mng.c Mandatory/tools.c Mandatory/jerry.c Mandatory/ft_animation.c Mandatory/memory_managment.c
 
 SRC_B = Bonus/so_long.c Bonus/map_hundling.c Bonus/win_mng.c Bonus/jerry.c Bonus/tom_work.c  Bonus/tom_mov.c Bonus/ft_animation.c Bonus/tools.c Bonus/tools_2.c Bonus/convert_img.c
 
@@ -36,15 +38,15 @@ all : Intro $(NAME)
 
 %.o : %.c $(HEADER_M) $(HEADER_GNL) $(HEADER_B)
 	@$(CC) $(CCFLAGS) -Imlx -c $< -o $@
-	@echo "\x1b[35m The Object File Of $< Is Created  \x1b[35m"
+	@tput sc; printf "$(Tab)\x1b[35m The Object File Of $< Is Created  \x1b[35m";sleep 0.42;tput rc;tput el;
 
 $(NAME) : $(OBJ_M) $(OBJ_GNL)
 	@$(CC) -lmlx -framework OpenGL -framework AppKit $(OBJ_M) $(OBJ_GNL) -o $(NAME)
-	@echo "\x1b[33m The Mndatory Part Is Ready To Use \x1b[0m"
+	@printf "$(Tab)";for i in `seq 25`;do printf "\x1b[33m #" && sleep 0.1;done;echo "\n\t$(Tab)\x1b[33m The Mndatory Part Is Ready To Use \x1b[0m"
 
 bonus : Intro $(OBJ_B) $(OBJ_GNL)
 	@$(CC) -lmlx -framework OpenGL -framework AppKit $(OBJ_B) $(OBJ_GNL) -o $(NAME)
-	@echo "\x1b[33m The Bonus Part Is Ready To Use \x1b[0m"
+	@printf "$(Tab)";for i in `seq 25`;do printf "\x1b[33m #" && sleep 0.1;done;echo "\n\t$(Tab)\x1b[33m The Bonus Part Is Ready To Use \x1b[0m"
 
 re : fclean all
 
@@ -57,6 +59,6 @@ fclean : clean
 	@rm -f $(NAME)
 
 Intro :
-	@echo "	\x1b[32m $$Intro \x1b[0m"
+	@echo "\x1b[32m $$Intro \x1b[0m"
 
 .PHONY : fclean clean
