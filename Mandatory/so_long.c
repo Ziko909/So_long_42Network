@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:19:50 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 09:14:02 by zaabou           ###   ########.fr       */
@@ -122,6 +122,8 @@ int	main(int ac, char **av)
 		mlx_hook(data->windows1, 4, 0, win1, data);
 		mlx_loop(data->mlx);
 	}
+	else if (ac != 2)
+		return (0);
 	else
 		ft_error (7, data);
 }

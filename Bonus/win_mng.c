@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   win_mng.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:24:19 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 09:09:23 by zaabou           ###   ########.fr       */

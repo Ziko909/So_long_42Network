@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:09:48 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 08:17:14 by zaabou           ###   ########.fr       */
@@ -73,6 +73,7 @@ void	image_put_to_pixel(t_data *data);
 int		ft_anim(t_data *data);
 void	ft_put_anim_img(t_data *data, char c, void *img);
 // Memory Management
+void	init_data(t_data **data);
 void	ft_free(t_data *data);
 // Helpful Functions
 int		ft_strlen(char *str);

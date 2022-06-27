@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   so_long_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 14:09:48 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 08:18:46 by zaabou           ###   ########.fr       */

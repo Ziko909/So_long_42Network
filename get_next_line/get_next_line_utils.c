@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 23:29:59 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 06:46:35 by zaabou           ###   ########.fr       */

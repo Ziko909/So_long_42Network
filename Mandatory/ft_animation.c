@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_animation.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+      */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/14 08:20:19 by zaabou            #+#    #+#             */
-/*   Updated: 2022/04/14 08:20:22 by zaabou           ###   ########.fr       */
+/*   Created: 2022/06/27 00:17:31 by zaabou            #+#    #+#             */
+/*   Updated: 2022/06/27 00:17:39 by zaabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../Header/so_long.h"
@@ -57,7 +57,7 @@ int	ft_mov(int key, t_data *data)
 			data = ft_ft_mov_r_l(key, data);
 	}
 	if (key == 53)
-		ft_exit(1337, data);
+		ft_exit(53, data);
 	return (0);
 }
 
