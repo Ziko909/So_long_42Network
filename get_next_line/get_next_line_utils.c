@@ -19,7 +19,10 @@ char	*ft_strjoine(char *rest, char *buffer)
 	char	*all;
 
 	if (!rest)
+	{
 		rest = malloc(1 * sizeof(char));
+		*rest = '\0';
+	}
 	if (!rest)
 		return (NULL);
 	i = 0;
@@ -34,24 +37,20 @@ char	*ft_strjoine(char *rest, char *buffer)
 	while (buffer[i])
 		all[all_index++] = buffer[i++];
 	all[all_index] = '\0';
-	free(rest);
-	return (all);
+	return (free(rest), all);
 }
 
 int	ft_2strlen(char *rest, char *buffer)
 {
 	int	i;
 	int	j;
-
 	if (!rest && !buffer)
 		return (0);
 	i = 0;
 	j = 0;
 	while (buffer[i])
 		i++;
-	if (!rest)
-		return (i);
-	while (rest[j])
+	while (rest && rest[j])
 		j++;
 	return (i + j);
 }
@@ -68,7 +67,7 @@ char	*ft_line_(char *rest)
 		return (NULL);
 	while (rest[i] && rest[i] != '\n')
 		i++;
-	line = (char *)malloc((i + 1) * sizeof(char));
+	line = (char *)malloc((i + 2) * sizeof(char));
 	if (!line)
 		return (NULL);
 	while (rest[j] && rest[j] != '\n')
