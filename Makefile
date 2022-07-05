@@ -28,7 +28,7 @@ OBJ_GNL = $(GNL:.c=.o)
 
 SRC_M = Mandatory/so_long.c Mandatory/map_hundling.c Mandatory/win_mng.c Mandatory/tools.c Mandatory/jerry.c Mandatory/ft_animation.c Mandatory/memory_managment.c
 
-SRC_B = Bonus/so_long.c Bonus/map_hundling.c Bonus/win_mng.c Bonus/jerry.c Bonus/tom_work.c  Bonus/tom_mov.c Bonus/ft_animation.c Bonus/tools.c Bonus/tools_2.c Bonus/convert_img.c
+SRC_B = Bonus/so_long.c Bonus/map_hundling.c Bonus/win_mng.c Bonus/jerry.c Bonus/tom_work.c  Bonus/tom_mov.c Bonus/ft_animation.c Bonus/tools.c Bonus/tools_2.c Bonus/convert_img.c Bonus/memory_managment.c
 
 OBJ_M = $(SRC_M:.c=.o)
 
