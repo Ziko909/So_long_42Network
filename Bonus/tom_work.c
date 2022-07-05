@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tom_work.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:23:20 by zaabou            #+#    #+#             */
-/*   Updated: 2022/04/14 08:23:24 by zaabou           ###   ########.fr       */
+/*   Updated: 2022/07/05 05:31:17 by zaabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "../Header/so_long_bonus.h"
@@ -56,9 +56,6 @@ void	ft_check_tom_table_of_pos(t_data *data)
 	{
 		data->enemy_p = (int *) malloc (data->enemy_s * sizeof (int));
 		if (!data->enemy_p)
-		{
-			write(2, "Problem In Memory Allocation\n", 30);
 			ft_exit(1337, data);
-		}
 	}
 }

@@ -88,7 +88,8 @@ void	image_put_to_pixel(t_data *data);
 // Animation Fonctions
 int		ft_anim(t_data *data);
 void	ft_put_anim_img(t_data *data, char c, void *img);
-// Memory Management 
+// Memory Management
+void	init_data(t_data **data);
 void	ft_free(t_data *data);
 // Helpful Functions
 int		ft_strlen(char *str);

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   win_mng.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/14 08:24:19 by zaabou            #+#    #+#             */
 /*   Updated: 2022/04/14 09:09:23 by zaabou           ###   ########.fr       */
@@ -11,37 +11,13 @@
 /* ************************************************************************** */
 #include "../Header/so_long_bonus.h"
 
-void	ft_free(t_data *data)
-{
-	if (data)
-	{
-		if (data->enemy_p)
-			free(data->enemy_p);
-		if (data->tmp)
-		{
-			data->node = data->tmp;
-			while (data->node)
-			{
-				data->tmp = data->node->next;
-				if (data->node->line)
-					free(data->node->line);
-				free(data->node);
-				data->node = data->tmp;
-			}
-			if (data->str)
-				free(data->str);
-		}
-		free(data);
-	}
-}
-
 void	ft_result(int mode, t_data *data)
 {
 	if (!mode)
 		write(1, "You Lost ❌\n", 13);
 	else
 		write(1, "You Win ✅\n", 13);
-	ft_exit(1337, data);
+	ft_exit(53, data);
 }
 
 int	ft_exit(int key, t_data *data)
@@ -49,7 +25,13 @@ int	ft_exit(int key, t_data *data)
 	if (key == 53 || key == 1337)
 	{
 		ft_free(data);
-		exit(0);
+		if (key == 1337)
+		{
+			ft_putstr_fd("Memory Allocation Failed !!!\n", 2);
+			exit(12);
+		}
+		else
+			exit(0);
 	}
 	return (0);
 }
@@ -96,6 +78,6 @@ int	win1(int keycode, int x, int y, t_data *data)
 		mlx_hook(data->windows1, 4, 0, win2, data);
 	}
 	if ((x >= 1475 && x <= 1800) && (y >= 725 && y <= 825))
-		ft_exit(1337, data);
+		ft_exit(53, data);
 	return (0);
 }
