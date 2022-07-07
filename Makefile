@@ -51,7 +51,7 @@ bonus : Intro $(OBJ_B) $(OBJ_GNL)
 re : fclean all
 
 clean :
-	rm -f $(OBJ_B)
+	@rm -f $(OBJ_B)
 	@rm -f $(OBJ_M)
 	@rm -f $(OBJ_GNL)
 
