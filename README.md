@@ -1,6 +1,39 @@
 # So_long_42Network
 Graphic Project
-<div align=center>
-<img width=800 heigth=400 src=https://github.com/Ziko909/So_long_42Network/blob/main/readme_img/Intro.gif>
-  <img width=800 heigth=400 src=https://github.com/Ziko909/So_long_42Network/blob/main/readme_img/Intro1.gif>
-</div>
+
+- intro
+![makefile](readme_img/Intro.gif)
+![Intro](readme_img/Intro1.gif)
+
+---
+### This Project is about creating a 2D game using the [MiniLibX](https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html) graphic library 📚
+
+>  Project Content
+
+- **Mandatory Part** 
+
+![alt text](readme_img/mandatory.gif)
+
+---
+
+<details>
+<summary> Details </summary>
+In this part of the project, I worked on creating a simple 2D game with some features like :
+<br>
+intro✨
+<br>
+player 🐭 (jerry)
+<br>
+sprites ✅
+<br>
+Collectible 🌟
+<br>
+walls 🧱
+<br>
+Doors 🚪
+<br>
+Number of moves ➒⓿➒
+<br>
+</details>
+
+---
