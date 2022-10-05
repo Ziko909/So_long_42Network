@@ -2,8 +2,8 @@
 Graphic Project
 
 - intro
-![makefile](readme_img/Intro.gif)
-![Intro](readme_img/Intro1.gif)
+![makefile](https://github.com/Ziko909/So_long_42Network/blob/main/readme_img/Intro.gif)
+![Intro](https://github.com/Ziko909/So_long_42Network/blob/main/readme_img/Intro1.gif)
 
 ---
 ### This Project is about creating a 2D game using the [MiniLibX](https://harm-smits.github.io/42docs/libs/minilibx/getting_started.html) graphic library 📚
@@ -12,7 +12,7 @@ Graphic Project
 
 - **Mandatory Part** 
 
-![alt text](readme_img/mandatory.gif)
+![mandatory](https://github.com/Ziko909/So_long_42Network/blob/main/readme_img/mandatory.gif)
 
 ---
 
