@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaabou <zaabou@student.1337.ma>              +#+  +:+       +#+        */
+/*   By: zaabou <zaabou@student.1337.ma>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 23:29:59 by zaabou            #+#    #+#             */
-/*   Updated: 2022/04/14 06:46:35 by zaabou           ###   ########.fr       */
+/*   Updated: 2022/10/05 00:56:45 by zaabou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*ft_strjoine(char *rest, char *buffer)
@@ -44,6 +45,7 @@ int	ft_2strlen(char *rest, char *buffer)
 {
 	int	i;
 	int	j;
+
 	if (!rest && !buffer)
 		return (0);
 	i = 0;
